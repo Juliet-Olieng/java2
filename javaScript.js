@@ -30,8 +30,12 @@ console.log(getBooksByAuthor("J.D.Salinger"))
 // to the library, ensuring that the new book has all required properties (title, author,
 // publicationYear, and isAvailable).
 function addNewBook(){
-let bookTittle=books.push("kidaa")
-console.log(bookTittle)
+    let newBook=new Object();
+    newBook.title="kidagaa"
+    newBook.author="majisifu"
+    newBook.publicationYear=1940
+    newBook.isAvailable=true
+    console.log(newBook)
 }
 addNewBook()
 // 4. Create a function checkoutBook that takes a book title as an argument and changes
