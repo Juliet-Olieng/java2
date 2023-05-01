@@ -20,11 +20,17 @@ for(i=0;i<books.length;i++){
 getAvailableBooks()
 // 2. Create a function getBooksByAuthor that takes an author's name as an argument and
 // returns an array of all books by that author.
-function getBooksByAuthor(author){
-    books.author
+const getBooksByAuthor=books.reduce((group,arr)=>{
+    const{author}=arr;
+    group[author]=group[author]??[];
+    group[author].push(arr);
+    return group;
 
-}
-console.log(getBooksByAuthor("J.D.Salinger"))
+
+
+},
+{})
+console.log(getBooksByAuthor)
 
 // 3. Create a function addNewBook that takes a book object as an argument and adds it
 // to the library, ensuring that the new book has all required properties (title, author,
